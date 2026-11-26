@@ -14,10 +14,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.section-info-ruler .icon-card::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@v1/santa-eulalia/icones/store.svg"); }
-.section-info-ruler .icon-truck::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@v1/santa-eulalia/icones/map-pin-house.svg"); }
-.section-info-ruler .icon-refresh::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@v1/santa-eulalia/icones/credit-card.svg"); }
-.section-info-ruler .icon-security::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@v1/santa-eulalia/icones/shield-check.svg"); }
-.icon-cart::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@v1/santa-eulalia/icones/shopping-cart.svg"); }
-.icon-search::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@v1/santa-eulalia/icones/search.svg"); }
-.icon-login::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@v1/santa-eulalia/icones/user-round.svg"); }
+.section-info-ruler .icon-card::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@55ec91d/santa-eulalia/icones/store.svg"); }
+.section-info-ruler .icon-truck::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@55ec91d/santa-eulalia/icones/map-pin-house.svg"); }
+.section-info-ruler .icon-refresh::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@55ec91d/santa-eulalia/icones/credit-card.svg"); }
+.section-info-ruler .icon-security::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@55ec91d/santa-eulalia/icones/shield-check.svg"); }
+.icon-cart::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@55ec91d/santa-eulalia/icones/shopping-cart.svg"); }
+.icon-search::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@55ec91d/santa-eulalia/icones/search.svg"); }
+.icon-login::before { background-image: url("https://cdn.jsdelivr.net/gh/uebihub/uebihub-assets@55ec91d/santa-eulalia/icones/user-round.svg"); }
