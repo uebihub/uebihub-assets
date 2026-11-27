@@ -1,0 +1,32 @@
+name: recortes
+on:
+  push:
+    paths: ['tmp/lista.txt']
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install "rembg[cpu]" pillow
+      - run: |
+          mkdir -p tmp/orig tmp/recorte
+          while read id url; do curl -sL -o tmp/orig/$id.jpg "$url"; done < tmp/lista.txt
+          python - <<'P'
+          import os
+          from rembg import remove, new_session
+          from PIL import Image
+          s=new_session('isnet-general-use')
+          for f in sorted(os.listdir('tmp/orig')):
+              im=Image.open('tmp/orig/'+f).convert('RGB')
+              out=remove(im,session=s,alpha_matting=False)
+              bb=out.getbbox(); out=out.crop(bb) if bb else out
+              out.save('tmp/recorte/'+f.replace('.jpg','.png'))
+              print(f,out.size)
+          P
+      - run: |
+          git config user.name "uebihub-bot"; git config user.email "bot@uebihub"
+          git add tmp/orig tmp/recorte; git commit -m "Recortes de produto (rembg)"; git push
