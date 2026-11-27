@@ -1,0 +1,15 @@
+name: marcas
+on:
+  push:
+    paths: ['tmp/marcas/baixar.py']
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tmp/marcas/baixar.py
+      - run: |
+          git config user.name "uebihub-bot"; git config user.email "bot@uebihub"
+          git add tmp/marcas; git commit -m "Logos de marcas (teste)"; git push
